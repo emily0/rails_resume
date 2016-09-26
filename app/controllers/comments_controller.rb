@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+
   def create
 		@group = Group.find(params[:group_id])
 		@comment = @group.comments.create(params[:comment].permit(:name, :body))

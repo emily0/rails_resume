@@ -7,4 +7,37 @@
  	position:absolute;
   left: 0;
  	top:0;
+
  }
+
+.logo {
+  width: 230px;
+  height:80px;
+  background: #3e313c;
+  border-bottom: 4px solid #2b1c29;
+}
+.status {
+  width: 230px;
+  height:100px;
+  background: #3e313c;
+  border-top: 4px solid #2b1c29;
+  overflow: auto;
+  bottom: 0;
+}
+
+.list {
+  list-style: none;
+}
+
+.list:nth-child(3){
+  color: white;
+  padding-bottom: 230px;
+}
+
+#profile {
+  width: 80px;
+  height: 80px;
+  background: #2b1c29;
+  margin: 8px;
+  float: left;
+}
