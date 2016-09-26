@@ -1,3 +1,4 @@
+<div class="container">
 <p>
   <strong>Title:</strong>
   <%= @group.title %>
@@ -9,3 +10,12 @@
 </p>
 <%= link_to 'Back', groups_path %> |
 <%= link_to 'Edit', edit_group_path(@group) %>
+
+<div id="comments">
+		
+		<%= render @group.comments %>
+
+		<h3>Add a comment:</h3>
+		<%= render "comments/form" %>
+	</div>
+</div>
