@@ -14,7 +14,9 @@
       <%= render 'layouts/sidebar' %>
       <div id="main">
         <%= yield %>
-        <%= render 'layouts/feature' %>
+        <% if !current_page?(root_path) && !current_page?(groups_path) %>
+          <%= render 'layouts/feature' %>
+        <% end %>
       </div>
     </div>
   </body>
