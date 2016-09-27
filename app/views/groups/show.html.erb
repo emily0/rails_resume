@@ -1,21 +1,16 @@
-<div class="container">
-<p>
-  <strong>Title:</strong>
-  <%= @group.title %>
-</p>
+<div class="main-content">
+  <div class="panel_1">
+    <h3><%= @group.title %></h3>
+    <h1><%= @group.description %></h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @group.description %>
-</p>
-<%= link_to 'Back', groups_path %> |
-<%= link_to 'Edit', edit_group_path(@group) %>
-
-<div id="comments">
-
-		<%= render @group.comments %>
-
-		<h3>Add a comment:</h3>
-		<%= render "comments/form" %>
-	</div>
+  <%= link_to 'Back', groups_path %> |
+  <%= link_to 'Edit', edit_group_path(@group) %>
+  </div>
+  <hr>
+    <div class="panel_2">
+  		<%= render @group.comments %>
+    </div>
+    <div class="panel_3">
+  		<%= render "comments/form" %>
+    </div>
 </div>

@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
 	end
 
 	def destroy
-		@group = Group.find(params[:post_id])
+		@group = Group.find(params[:group_id])
 		@comment = @group.comments.find(params[:id])
 		@comment.destroy
 

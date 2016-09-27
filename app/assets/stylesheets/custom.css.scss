@@ -1,0 +1,28 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+textarea.commet-submit {
+  height: 35px;
+  width: 70%;
+  display: inline-block;
+  margin-bottom: -14px;
+  margin-left: 60px;
+}
+.progress {
+  border-radius: 20px;
+}
+
+.progress-bar {
+  border-radius: 20px;
+  text-align: left;
+  padding-left: 10px;
+  background: #ec8736;
+}
+
+.progress-bar2{
+  background: #4d394b;
+}
+
+.badge {
+  background: #e94c5c;
+}
