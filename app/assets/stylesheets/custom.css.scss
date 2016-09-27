@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.comment_body p {
+  margin: 0 70px 10px;
+}
+
 textarea.commet-submit {
   height: 35px;
   width: 70%;
@@ -15,7 +19,7 @@ textarea.commet-submit {
 .progress-bar {
   border-radius: 20px;
   text-align: left;
-  padding-left: 10px;
+  padding-left: 5px;
   background: #ec8736;
 }
 

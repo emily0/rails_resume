@@ -1,9 +1,11 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
 
+
   def create
 		@group = Group.find(params[:group_id])
-		@comment = @group.comments.create(params[:comment].permit(:name, :body))
+		@comment = @group.comments.create(comment_params)
+
 
 		redirect_to group_path(@group)
 	end
@@ -15,4 +17,9 @@ class CommentsController < ApplicationController
 
 		redirect_to group_path(@group)
 	end
+
+  private
+    def comment_params
+      params.require(:comment).permit(:name, :body)
+    end
 end

@@ -1,14 +1,20 @@
 <div class="comment clearfix">
-		<div class="comment_photo"></div>
-		<div class="comment_content">
-			<p class="comment_name"><strong><%= comment.name %></strong></p>
-			<p class="comment_body"><%= simple_format(comment.body) %></p>
-			<p class="comment_time"><%= time_ago_in_words(comment.created_at) %> Ago</p>
+		<div class="comment_photo">
+			<% if comment.name="yumin" %>
+				<%= image_tag "pic1.png" %>
+			<% end %>
 		</div>
-	<% if user_signed_in? %>
-	<p><%= link_to 'Delete', [comment.group, comment],
-								  method: :delete,
-								  class: "button",
-								 	data: { confirm: 'Are you sure?' } %></p>
- 	<% end %>
+		<div class="comment_content">
+			<span class="comment_name"><strong><%= comment.name %></strong></span>
+			<p class="comment_body"><%= simple_format(comment.body) %></p>
+			<p style="color:#c6c6c6" class="comment_time"><%= time_ago_in_words(comment.created_at) %> Ago
+				<% if current_user && current_user.admin? %>
+				<span><%= link_to 'Delete', [comment.group, comment],
+											  method: :delete,
+											  class: "button",
+											 	data: { confirm: 'Are you sure?' } %></span>
+			 	<% end %>
+			</p>
+		</div>
+
 </div>

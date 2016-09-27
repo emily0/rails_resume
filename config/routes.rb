@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   get 'index', to: 'welcome#index'
 
-  root 'welcome#index'
+  root 'groups#index'
 end

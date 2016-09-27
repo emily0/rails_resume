@@ -1,8 +1,10 @@
 <%= form_for([@group, @group.comments.build]) do |f| %>
 <form class="form-inline">
 	<div class="form-group">
-		<%= f.text_area :body, class: "form-control commet-submit" %>
-		<input class="btn btn-default" type="submit" value="Submit">
+		<%= f.text_area :body, class: "form-control commet-submit", placeholder: "Please click the icon at the top right corner and contact me" %>
+		<span id="contact">
+			<a href="mailto:yumin3991@gmail.com?Subject=Hello%20again" target="_top">Submit</a>
+		</span>
 	</div>
 </form>
 <% end %>
